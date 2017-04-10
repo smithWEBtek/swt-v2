@@ -11,10 +11,11 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+   </head>
   <body>
   <div style="margin: 2%">
     <h1>smithWEBtek</h1><h4>web development, data management, insight</h4>
+    <%= render partial: 'layouts/navbar' %>
     <hr>
     <%= yield %>     
       <div id="flash_messages" class="flash_style">
