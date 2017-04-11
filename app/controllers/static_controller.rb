@@ -27,7 +27,6 @@ class StaticController < ApplicationController
   end
 
   def tools
-    @code = PostSection.new
     render 'static/tools'
   end
 
