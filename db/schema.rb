@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170411195659) do
+ActiveRecord::Schema.define(version: 20170411204150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,9 +42,8 @@ ActiveRecord::Schema.define(version: 20170411195659) do
   end
 
   create_table "post_sections", force: :cascade do |t|
-    t.text     "content"
-    t.integer  "number"
     t.integer  "post_id"
+    t.integer  "section_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -59,6 +58,13 @@ ActiveRecord::Schema.define(version: 20170411195659) do
     t.text     "outline"
     t.text     "summary"
     t.date     "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.string   "format"
+    t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -54,7 +54,8 @@ then,
 you 'edit' the post again, to either update title, outline or summary
 or, you 'add post section'
 
-
+post_tag
+comment_tag
 
 
 

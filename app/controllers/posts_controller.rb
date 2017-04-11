@@ -10,10 +10,6 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @post.post_sections.build(number: 1)
-    @post.post_sections.build(number: 2)
-    @post.post_sections.build(number: 3)
-
   end
   
   def edit
@@ -48,6 +44,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:date, :title, :outline, :summary, post_sections_attributes: [:number, :content])
+      params.require(:post).permit(:date, :title, :outline, :summary)
     end
 end
