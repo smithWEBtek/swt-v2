@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :tags
+  resources :users
+  resources :comments
   resources :hilites
   resources :post_sections
   resources :posts

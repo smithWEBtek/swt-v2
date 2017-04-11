@@ -1,9 +1,38 @@
-<h4>Show Hilite snippet</h4>
+<h4>Hilite snippet show page</h4>
+<br>
+<div class="post-body">
+  <h4>snippet </h4>
+  <%= @hilite.code %><br><br>
 
+  <h4>base url </h4>
+  http://hilite.me/api<br><br>
 
-<div>
-
-  snippet <%= @hilite.id %>:
-  <%= @hilite.code %><br>
-  api_result: <%= @hilite.api_result %>
+  <h4>create_api_url method concatenates our snippet and lexer(language syntax choice)</h4>
+  1. the base url: "http://hilite.me/api", is appended with:   + "?code=snippet" + "?lexer=ruby" <br>
+  2. gsub method is appended to remove spaces:  .gsub(" ","") <br>
+  3. the final url we submit to the API is now: <br><br>
 </div>
+
+<code>
+  <strong><%= @hilite.api_url %></strong><br><br>
+  <%= link_to "Click here to see what the API returns in the browser:", @hilite.api_url %>
+</code>
+
+<p>HTML returned based on our choice of 'lexer' and code snippet we provided in our form:</p>
+<iframe src=<%= "#{@hilite.api_url}" %>></iframe>
+
+<h4>Result (below) that we want the AJAX call to produce: </h4>
+
+<!-- HTML generated using hilite.me -->
+
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+
+  <pre style="margin: 0; line-height: 125%">defcreate_api_urlself<span style="color: #333333">.</span>api_url<span style="color: #333333">=</span>(<span style="background-color: #fff0f0">&quot;http://hilite.me/api?code=&quot;</span> <span style="background-color: #fff0f0">&quot;</span>
+  </pre>
+</div>
+
+<h4>Another way, using GitHub gist: </h4><br>
+
+"https://gist.github.com/smithWEBtek/4ec14aa1ebd575a5ebeee518dd04e5eb.js"
+
+<script src="https://gist.github.com/smithWEBtek/4ec14aa1ebd575a5ebeee518dd04e5eb.js"></script>

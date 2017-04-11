@@ -1,5 +1,67 @@
 This app is intended as both a blog and working lab.
 
+
+170411
+
+Blog
+I want to be able to start little research efforts and save them consistently, return to enhance, and eventually publish.
+Need basic post parts in databse, which I have in the posts and post_sections models.
+
+Need a system for naming, dating, placeholder within blogs views
+Public/private setting, so that I can control what is publically viewable, set still navigate quickly to ongoing projects.
+
+As my understanding increases, I will return to stalled projects to push them further towards publishing.
+
+I need a plugin blog engine that is already formatted for inclusing in a Rails app. 
+
+I have all the parts
+I have post_section
+I could use a type of post_section to create rendered code snippet
+
+The blog index would have:
+date
+    title
+        summary
+
+blog category index would show (grouped by tags):
+    by technology, tool, tips, language, framework
+
+blog show page has:
+all blog parts
+conventional format to follow, unless the subject requires deviation
+title
+outline
+post_bodies
+summary
+comments with self rating (visitor identifies as new, conversant, experienced or pro)
+
+
+------------
+new blog post
+form saves:
+    title
+    outline
+    summary
+form has link, to "Add a post_section" form.
+new post_section form:
+    has all fields
+    choose format
+        if code, trigger 'prettify' method
+        if video, trigger method to embed url in iframe
+        if formatted text, trigger markdown formatting process
+    on save, redirect_to @post
+then, 
+you 'edit' the post again, to either update title, outline or summary
+or, you 'add post section'
+
+
+
+
+
+
+
+
+
 170410
 
             | about    | services  | projects  | blog     | wiki      | future    | ask       |

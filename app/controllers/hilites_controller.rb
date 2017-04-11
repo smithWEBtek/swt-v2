@@ -6,6 +6,7 @@ class HilitesController < ApplicationController
   end
 
   def show
+    @hilite.create_api_url
   end
 
   def new
