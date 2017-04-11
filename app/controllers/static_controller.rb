@@ -25,4 +25,10 @@ class StaticController < ApplicationController
   def projects
     render 'static/projects'
   end
+
+  def tools
+    @code = PostSection.new
+    render 'static/tools'
+  end
+
 end

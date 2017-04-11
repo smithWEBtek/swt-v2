@@ -32,6 +32,17 @@ blog: technical blog
     links to new functionality in wiki app
 
 
+    db: title; outline; body1-?; image1-?; video1-?; snippet1-?; summary;
+        form has: 
+            title, outline, summary
+            buttons to add multiple body, image, video, snippet
+
+wiki: knowledge base
+    book
+    bookmark
+    mentor
+    learnpath
+
 
 170409
 things to include: 

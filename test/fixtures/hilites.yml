@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyText
+  lexer: MyString
+  style: MyString
+  lineos: MyString
+  divstyles: MyString
+  api_url: MyString
+
+two:
+  code: MyText
+  lexer: MyString
+  style: MyString
+  lineos: MyString
+  divstyles: MyString
+  api_url: MyString

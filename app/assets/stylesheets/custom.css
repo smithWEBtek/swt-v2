@@ -1,3 +1,8 @@
+.logo {
+  font-weight: normal;
+  color: #636694;
+}
+
 .field_with_errors {
   padding: 2px;
   background-color: red;

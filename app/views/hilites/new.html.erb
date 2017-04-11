@@ -1,0 +1,41 @@
+<h5>Form for pasting code snippet, to return html</h5>
+<div>
+  <%= form_for @hilite do |f| %>
+    <%= f.label :code %><br>
+    <%= f.text_area :code %><br>
+
+    <%= f.label :lexer %>
+    <%= f.collection_select :lexer, @lexers, :to_s, :to_s, include_blank: false %><br>
+   <%= f.submit %><br>
+  <% end %>
+</div>
+
+
+<h5>hilite.me API documentation</h5>
+<p>
+GET or POST to http://hilite.me/api with these parameters:
+The request will return the HTML code in UTF-8 encoding.</p>
+
+<p>
+code: source code to format
+lexer: [lexer](http://pygments.org/docs/lexers/) to use, default it 'python'
+options: optional comma-separated list of lexer options
+style: [style](http://pygments.org/docs/styles/) to use, default is 'colorful'
+linenos: if not empty, the HTML will include line numbers
+divstyles: CSS style to use in the wrapping <div></div> element, can be empty</p>
+
+<p>
+The code pasted in will be combined with the chosen lexer (language) and appended to the API_url.
+The fully populated API_url will be sent via AJAX 'get' request.
+The the returned 'API_result' will be displayed in a div element below the form. </p>
+
+<p>
+schema of the hilite table: 
+      t.text :code
+      t.string :lexer
+      t.string :style(default: colorful)
+      t.string :lineos(default: includes line numbers)
+      t.string :divstyles(default: <div></div>)
+      t.string :api_url(default base url: http://hilite.me/api)
+      t.text :api_result(html returned by api)</p>
+
