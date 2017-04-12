@@ -3,6 +3,5 @@ namespace :db do
   task heroku_reset: :environment do
     sh "rake db:migrate"
     sh "rake db:seed"
-    sh "rails s"
   end
 end

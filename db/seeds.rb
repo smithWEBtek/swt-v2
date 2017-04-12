@@ -30,16 +30,16 @@ DATA_posts ={
  :post_keys =>
     ["title", "outline", "summary", "date"],
   :posts => [
-    ["Dark N' Scary Night", "TOC, Ch1,Ch2,Ch3, conclusion", "in summary..."],
-    ["Plain N' Simple Donuts", "TOC, Ch1,Ch2,Ch3, conclusion", "in summary..."],
-    ["Ugly Squirrels", "sTOC, Ch1,Ch2,Ch3, conclusion", "in summary..."],
-    ["Concatening Dogs", "kaTOC, Ch1,Ch2,Ch3, conclusion", "in summary..."],
-    ["How to Eat", "meTOC, Ch1,Ch2,Ch3, conclusion", "in summary..."],
-    ["A Gentler Command Line", "tenzTOC, Ch1,Ch2,Ch3, conclusion", "in summary..."],
-    ["Where is that Tag?", "daTOC, Ch1,Ch2,Ch3, conclusion", "in summary..."],
-    ["Aroma Therapy", "cTOC, Ch1,Ch2,Ch3, conclusion", "in summary..."],
-    ["Volley Ball, is it Discriminatory?", "TOC, Ch1,Ch2,Ch3, conclusion", "in summary..."],
-    ["Tolerating Intolerance", "fTOC, Ch1,Ch2,Ch3, conclusion", "in summary..."]
+    ["Dark N' Scary Night", "TOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-10"],
+    ["Plain N' Simple Donuts", "TOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-11"],
+    ["Ugly Squirrels", "sTOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-12"],
+    ["Concatening Dogs", "kaTOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-13"],
+    ["How to Eat", "meTOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-14"],
+    ["A Gentler Command Line", "tenzTOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-15"],
+    ["Where is that Tag?", "daTOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-16"],
+    ["Aroma Therapy", "cTOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-17"],
+    ["Volley Ball, is it Discriminatory?", "TOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-18"],
+    ["Tolerating Intolerance", "fTOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-19"]
   ]
 }
 
@@ -82,10 +82,93 @@ def make_sections
   end
 end
 
+DATA_post_sections ={
+ :post_section_keys =>
+    ["post_id", "section_id"],
+  :post_sections => [
+  [1, 1],       
+  [1, 2],       
+  [1, 3],       
+  [1, 4],       
+  [1, 5], 
+
+  [2, 1],       
+  [2, 2],       
+  [2, 3],       
+  [2, 4],       
+  [2, 5], 
+
+  [3, 1],       
+  [3, 2],       
+  [3, 3],       
+  [3, 4],       
+  [3, 5], 
+
+  [4, 1],       
+  [4, 2],       
+  [4, 3],       
+  [4, 4],       
+  [4, 5],  
+
+  [5, 1],       
+  [5, 2],       
+  [5, 3],       
+  [5, 4],       
+  [5, 5],  
+
+  [6, 1],       
+  [6, 2],       
+  [6, 3],       
+  [6, 4],       
+  [6, 5],  
+
+  [7, 1],       
+  [7, 2],       
+  [7, 3],       
+  [7, 4],       
+  [7, 5],  
+
+  [8, 1],       
+  [8, 2],       
+  [8, 3],       
+  [8, 4],       
+  [8, 5],  
+
+  [9, 1],       
+  [9, 2],       
+  [9, 3],       
+  [9, 4],       
+  [9, 5],  
+
+  [9, 1],       
+  [9, 2],       
+  [9, 3],       
+  [9, 4],       
+  [9, 5], 
+
+  [10, 1],       
+  [10, 2],       
+  [10, 3],       
+  [10, 4],       
+  [10, 5]  
+  ]
+}
+
+def make_post_sections
+  DATA_post_sections[:post_sections].each do |post_section|
+    new_post_section = PostSection.new
+    post_section.each_with_index do |attribute, i|
+      new_post_section.send(DATA_post_sections[:post_section_keys][i]+"=", attribute)
+    end
+    new_post_section.save
+  end
+end
+
 def main
   make_users
   make_posts
   make_sections
+  make_post_sections
 end
 
 main

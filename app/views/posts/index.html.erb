@@ -1,16 +1,8 @@
 <%= render partial: 'posts/posts_navbar' %>
-<table>
-  <th class="col-large">
-    <tr align="left">
-      <td>date</td>
-      <td>title</td>
-    </tr>
- </th>
+
 <% @posts.each do |post| %>
-  <tr>
-    <td><%= post.date %></td>
-    <td><%= post.title %></td>
-  </tr>
-  <hr>
-</table>
+
+   (<%= post.id %>) 
+   <%= post.date %> : 
+   <%= link_to post.title, post_path(post) %><br>
 <% end %>
