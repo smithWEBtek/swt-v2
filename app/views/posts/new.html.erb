@@ -1,4 +1,6 @@
-<h1>Post New</h1>
+<%= render partial: 'posts/posts_navbar' %>
+
+<h3>Post New</h3>
 
 <%= form_for @post do |f| %>
   <p>
@@ -14,14 +16,11 @@
     <%= f.text_area :outline %>
   </p>
   <p>
-    <%= f.label :contents %><br>
-    <%= f.fields_for :post_sections do |post_sections_form| %>
-      <%= post_sections_form.text_area :content %><br>
-    <% end %>
-  </p>
-  <p>
     <%= f.label :summary %><br>
     <%= f.text_area :summary %>
+  </p>
+  <p>
+    <%= link_to "New section (text, code, video, image)", new_section_path %>
   </p>
   <%= f.submit %>
 <% end %>

@@ -1,6 +1,16 @@
-<h1>Posts Index</h1>
-
+<%= render partial: 'posts/posts_navbar' %>
+<table>
+  <th class="col-large">
+    <tr align="left">
+      <td>date</td>
+      <td>title</td>
+    </tr>
+ </th>
 <% @posts.each do |post| %>
-<%= render partial: 'posts/post', locals: { post: post } %>
-<hr>
+  <tr>
+    <td><%= post.date %></td>
+    <td><%= post.title %></td>
+  </tr>
+  <hr>
+</table>
 <% end %>

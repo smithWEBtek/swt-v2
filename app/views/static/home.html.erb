@@ -1,28 +1,35 @@
-<h4>Boring sites, brilliant data</h4>
-<p>We help small to medium sized organizations, departments, teams, non-profits and individuals get their critical data connected in the browser, so they can <strong>decide, act, record and analyze</strong>, regardless of where that data currently lives.</p>
-  <ul>
-    <li><strong>Decide:</strong> big picture, priority-driven, awareness of all your various data streams, todos, thoughts and goals</li>
-    <li><strong>Act:</strong> execute on things that matter, driven by calm, prioritized decisions, acknowledging trade-offs</li>
-    <li><strong>Record:</strong> computers are supposed to make life easier, they should record everything I wish to have saved</li>
-    <li><strong>Analyze:</strong> the more we record digital organized, the more we can act with intent, leveraging the past</li>
-  </ul>
-<h4>Leverage external data:</h4>
-  <ul>
-    <li>Gain new insights by connecting related data feeds</li>
-    <li>Compare your summaries to external trends</li>
-    <li>Find indicators to leverage and watch</li>
-    <li>Refine how you decide, act, record and analyze.</li>
-  </ul>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
 
-<h4>We believe in:</h4> 
-    <ul>
-      <li>Function over fancy</li>
-      <li>Less things that swim around when you try to click on them, popups of things you don't need and annoying hipster background music</li>
-      <li>Helping you remove paper from your workflow</li>
-      <li>Automating to the web, the repetitive tasks that are essential to your business</li>
-      <li>Summarizing your data automatically in meaningful increments and formats</li>
-      <li>Teaching you how we do it</li>
-    </ul>
-<h4>  ... saving you precious brain cells.</h4>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="<%= about_path %>">about <span class="sr-only">(current)</span></a></li>
+        <li><a href="<%= projects_path %>">projects</a></li>
+        <li><a href="<%= posts_path %>">blog</a></li>
+        <li><a href="<%= wiki_path %>">wiki</a></li>
+        <li><a href="<%= ask_path %>">ask</a></li>
+      </ul>
+      <!-- search -->
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <!-- /search -->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
 
 <%#= render partial: 'static/demo' %>

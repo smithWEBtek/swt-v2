@@ -12,12 +12,10 @@ Public/private setting, so that I can control what is publically viewable, set s
 
 As my understanding increases, I will return to stalled projects to push them further towards publishing.
 
-I need a plugin blog engine that is already formatted for inclusing in a Rails app. 
-
 I have all the parts
 I have post_section
 I could use a type of post_section to create rendered code snippet
-
+=================================================================
 The blog index would have:
 date
     title

@@ -15,10 +15,8 @@
    </head>
   <body>
   <div style="margin: 2%">
-    <h1 class="logo">smithWEBtek</h1><h4>web development, data insight</h4>
-    <%= render partial: 'layouts/navbar' %>
-    <hr>
-    <%= yield %>     
+    <h1 class="logo"><%= link_to "smithWEBtek", root_path %></h1><h5>boring sites brilliant data</h5>
+     <%= yield %>     
       <div id="flash_messages" class="flash_style">
         <% flash.each do |key, value| %>
         <%= content_tag(:div, value, :class => "flash #{key}") %>
