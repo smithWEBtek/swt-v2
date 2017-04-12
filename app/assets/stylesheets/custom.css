@@ -3,18 +3,18 @@
   color: #636694;
 }
 
-.field_with_errors {
+.field-with-errors {
   padding: 2px;
   background-color: red;
   display: table;
 }
 
-.index_view {
+.index-view {
   font-weight: normal;
   background: LightGray;
 }
 
-.nav_bar {
+.nav-bar {
   font-weight: bold;
   background: maroon;
   &:hover {
@@ -22,7 +22,7 @@
   }
 }
 
-.registration_bar {
+.registration-bar {
   font-weight: normal;
   background: Wine;
   &:hover {
@@ -38,7 +38,7 @@
   }
 }
 
-.flash_style {
+.flash-style {
   font-weight: bold;
   color: #cc3300;
   font-style: italic;

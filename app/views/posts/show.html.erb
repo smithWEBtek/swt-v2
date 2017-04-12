@@ -1,3 +1,52 @@
-<h1>Post Show</h1>
+<p>
+  <%= link_to "all posts", posts_path %>
+  <%= link_to "edit", edit_post_path(@post) %>
+  <%= link_to "del", @post, confirm: 'are you sure?', method: :delete %>
+</p>
 
-<%= render partial: 'posts/post', locals: { post: @post } %>
+
+<article>
+  <header>
+    <h3><%= @post.title %></h3>
+    <p>Posted <%= @post.date %></p>
+  </header>
+
+
+<!-- outline
+<h4><%= @post.title %></h4>
+
+  use HTML_TOC :
+  https://github.com/vmg/redcarpet
+  The HTML renderer has an alternate version, Redcarpet::Render::HTML_TOC, which will output a table of contents in HTML based on the headers of the Markdown document.
+
+  When instantiating this render object, you can optionally pass a nesting_level option which takes an integer or a range and allows you to make it render only headers at certain levels.
+   -->
+<!-- post sections -->
+  <!-- @post.sections.each do |section| etc... -->
+  <!-- code, formatted text, plain text, video or image -->
+  <!-- section consumes up to 80% of visibile screen -->
+  <!-- then make another section, via the 'edit post' page, 'add section' button/link -->
+
+<!-- summary -->
+<h5><%= @post.summary %></h5>
+
+
+  <p>...</p>
+  <p>...</p>
+  <p>...</p>
+  <section>
+    <h2>Comments</h2>
+    <article>
+      <footer>
+        <p>Posted by: Joe Balochio</p>
+      </footer>
+      <p>This was a great article</p>
+    </article>
+    <article>
+      <footer>
+        <p>Posted by: Casey Brock</p>
+      </footer>
+      <p>How do you think this applies to the plan for world domination?</p>
+    </article>
+  </section>
+</article>

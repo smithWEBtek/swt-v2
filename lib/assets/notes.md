@@ -24,17 +24,17 @@ date
 blog category index would show (grouped by tags):
     by technology, tool, tips, language, framework
 
+=================================================================
 blog show page has:
-all blog parts
-conventional format to follow, unless the subject requires deviation
-title
-outline
-post_bodies
-summary
-comments with self rating (visitor identifies as new, conversant, experienced or pro)
+    all blog parts
+    conventional format to follow, unless the subject requires deviation
+    title
+    outline
+    post_bodies
+    summary
+    comments with self rating (visitor identifies as new, conversant, experienced or pro)
+=================================================================
 
-
-------------
 new blog post
 form saves:
     title

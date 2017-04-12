@@ -29,18 +29,6 @@ ActiveRecord::Schema.define(version: 20170411205409) do
     t.datetime "updated_at",         null: false
   end
 
-  create_table "hilites", force: :cascade do |t|
-    t.text     "code"
-    t.string   "lexer"
-    t.string   "style"
-    t.string   "lineos"
-    t.string   "divstyles"
-    t.string   "api_url"
-    t.text     "api_result"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "post_sections", force: :cascade do |t|
     t.integer  "post_id"
     t.integer  "section_id"
