@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
-  resources :tags
-  resources :users
-  resources :comments
-  resources :hilites
-  resources :post_sections
-  resources :posts
+  resources :tags, :users, :comments, :sections, :posts
   root 'static#home'
   get '/about', to: 'static#about'
   get '/ask', to: 'static#ask'

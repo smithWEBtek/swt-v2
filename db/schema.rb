@@ -29,13 +29,6 @@ ActiveRecord::Schema.define(version: 20170411205409) do
     t.datetime "updated_at",         null: false
   end
 
-  create_table "post_sections", force: :cascade do |t|
-    t.integer  "post_id"
-    t.integer  "section_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "post_tags", force: :cascade do |t|
     t.integer "post_id"
     t.integer "tag_id"
@@ -58,6 +51,7 @@ ActiveRecord::Schema.define(version: 20170411205409) do
   end
 
   create_table "sections", force: :cascade do |t|
+    t.integer  "post_id"
     t.string   "format"
     t.text     "content"
     t.datetime "created_at", null: false

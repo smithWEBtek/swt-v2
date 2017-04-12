@@ -1,22 +1,30 @@
+<%= render partial: 'posts/posts_navbar' %>
+
 <p>
   <%= link_to "all posts", posts_path %>
   <%= link_to "edit", edit_post_path(@post) %>
-  <%= link_to "del", @post, confirm: 'are you sure?', method: :delete %>
 </p>
 
 <article>
-  <header>
-    <h3><%= @post.title %></h3>
-    <p>Posted <%= @post.date %></p>
-  </header>
+  <p><h4>title</h4> <%= @post.title %>
+    <p><h4>Posted</h4> <%= @post.date %></p>
+  </p>
+  <p><h4>outline</h4>
+      <p><%= @post.outline %></p>
+  </p>
+
+  <p><h4>sections</h4>
     <% @post.sections.each do |section| %>
-      <section>
-        <p><%= section.content %></p>
-      </section>
+      <p><%= section.content %></p>
     <% end %>
-    =========================================== 
-  <section>
-    <h2>Comments</h2>
+  </p>
+  
+  <p><h4>summary</h4>
+    <p><%= @post.summary %></p>
+  </p>
+  
+  =========================================== 
+  <p><h4>comments</h4>
     <article>
       <footer>
         <p>Posted by: Joe Balochio</p>
@@ -29,8 +37,8 @@
       </footer>
       <p>How do you think this applies to the plan for world domination?</p>
     </article>
-  </section>
-</article> -->
+  </p>
+</article>
 
 
 <!-- outline
@@ -38,9 +46,9 @@
 
   use HTML_TOC :
   https://github.com/vmg/redcarpet
-  The HTML renderer has an alternate version, Redcarpet::Render::HTML_TOC, which will output a table of contents in HTML based on the headers of the Markdown document.
+  The HTML renderer has an alternate version, Redcarpet::Render::HTML_TOC, which will output a table of contents in HTML based on the sections of the Markdown document.
 
-  When instantiating this render object, you can optionally pass a nesting_level option which takes an integer or a range and allows you to make it render only headers at certain levels.
+  When instantiating this render object, you can optionally pass a nesting_level option which takes an integer or a range and allows you to make it render only sections at certain levels.
    -->
 <!-- post sections -->
   <!-- @post.sections.each do |section| etc... -->
@@ -49,4 +57,4 @@
   <!-- then make another section, via the 'edit post' page, 'add section' button/link -->
 
 <!-- summary -->
-<!-- <h5><%#= @post.summary %></h5>
+<!-- <h4><%#= @post.summary %></h4>

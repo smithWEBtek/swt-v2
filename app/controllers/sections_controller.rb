@@ -10,6 +10,7 @@ class SectionsController < ApplicationController
 
   def new
     @section = Section.new
+    redirect_to post_path(@section.post)
    end
   
   def edit

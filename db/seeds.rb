@@ -55,13 +55,13 @@ end
 
 DATA_sections ={
  :section_keys =>
-    ["format", "content"],
+    ["post_id", "format", "content"],
   :sections => [
-  ["formated text", "lorax beevul winum bumpus klapsnap flarb knarb"],
-  ["plain text", "lorax beevul winum bumpus klapsnap flarb knarb"],
-  ["video", "https://www.youtube.com/watch?v=CVX7-eZReqs"],
-  ["image", "https://goo.gl/images/BAW1bQ"],
-  ["code", "  def self.reset_meal_food_ids
+  [1, "formated text", "lorax beevul winum bumpus klapsnap flarb knarb"],
+  [1, "plain text", "lorax beevul winum bumpus klapsnap flarb knarb"],
+  [1, "video", "https://www.youtube.com/watch?v=CVX7-eZReqs"],
+  [1, "image", "https://goo.gl/images/BAW1bQ"],
+  [1, "code", "  def self.reset_meal_food_ids
     all.each do |meal|
       next unless Food.find_by_id(meal.food_id).nil?
       food = Food.find_or_create_by(name: 'food deleted')
@@ -81,79 +81,7 @@ def make_sections
     new_section.save
   end
 end
-
-DATA_post_sections ={
- :post_section_keys =>
-    ["post_id", "section_id"],
-  :post_sections => [
-  [1, 1],       
-  [1, 2],       
-  [1, 3],       
-  [1, 4],       
-  [1, 5], 
-
-  [2, 1],       
-  [2, 2],       
-  [2, 3],       
-  [2, 4],       
-  [2, 5], 
-
-  [3, 1],       
-  [3, 2],       
-  [3, 3],       
-  [3, 4],       
-  [3, 5], 
-
-  [4, 1],       
-  [4, 2],       
-  [4, 3],       
-  [4, 4],       
-  [4, 5],  
-
-  [5, 1],       
-  [5, 2],       
-  [5, 3],       
-  [5, 4],       
-  [5, 5],  
-
-  [6, 1],       
-  [6, 2],       
-  [6, 3],       
-  [6, 4],       
-  [6, 5],  
-
-  [7, 1],       
-  [7, 2],       
-  [7, 3],       
-  [7, 4],       
-  [7, 5],  
-
-  [8, 1],       
-  [8, 2],       
-  [8, 3],       
-  [8, 4],       
-  [8, 5],  
-
-  [9, 1],       
-  [9, 2],       
-  [9, 3],       
-  [9, 4],       
-  [9, 5],  
-
-  [9, 1],       
-  [9, 2],       
-  [9, 3],       
-  [9, 4],       
-  [9, 5], 
-
-  [10, 1],       
-  [10, 2],       
-  [10, 3],       
-  [10, 4],       
-  [10, 5]  
-  ]
-}
-
+ 
 def make_post_sections
   DATA_post_sections[:post_sections].each do |post_section|
     new_post_section = PostSection.new
@@ -168,7 +96,6 @@ def main
   make_users
   make_posts
   make_sections
-  make_post_sections
 end
 
 main
