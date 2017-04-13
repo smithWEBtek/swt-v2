@@ -17,4 +17,10 @@ class Post < ApplicationRecord
     # self.picture_url = url_base + url_id + picture
     self.picture_short_name = url_base + url_id + picture
   end
+
+  def read
+    file = "#{Rails.root}"+"/app/assets/blogs/blog.md"
+    @blog = File.read(file)
+  end
+
 end

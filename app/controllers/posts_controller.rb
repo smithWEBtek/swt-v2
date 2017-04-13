@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post.make_url
+    @blog = @post.read
   end
 
   def new
