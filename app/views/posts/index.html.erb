@@ -3,6 +3,6 @@
 <% @posts.each do |post| %>
 
    (<%= post.id %>) 
-   <%= post.date %> : <%= post.picture_short_name %> 
+   <%= post.date %> 
    <%= link_to post.title, post_path(post) %><br>
 <% end %>

@@ -1,3 +1,5 @@
+require 'redcarpet'
+
 class Post < ApplicationRecord
   has_many :comments
   has_many :users, through: :comments
@@ -18,29 +20,26 @@ class Post < ApplicationRecord
     self.picture_short_name = url_base + url_id + picture
   end
 
-  def read
-    file = "#{Rails.root}"+"/app/assets/blogs/blog.md"
-    @blog = self.markdown(File.read(file))
+  def read(file)
+    if file.nil?
+      "no blog.md file exists"
+    else
+      file_path = "#{Rails.root}"+"/app/assets/blogs/"+"#{file}"
+      self.markdown(File.read(file_path))
+    end
   end
 
-  def markdown(text)
+  def markdown(content)
+    renderer = Redcarpet::Render::HTML.new(hard_wrap: true, filter_html: true)
     options = {
-      filter_html:     true,
-      hard_wrap:       true, 
-      link_attributes: { rel: 'nofollow', target: "_blank" },
-      space_after_headers: true, 
-      fenced_code_blocks: true
+      autolink: true,
+      no_intra_emphasis: true, 
+      disable_indented_code_blocks: true,
+      fenced_code_blocks: true, 
+      lax_html_blocks: true,
+      strikethrough: true,
+      superscript: true
     }
-
-    extensions = {
-      autolink:           true,
-      superscript:        true,
-      disable_indented_code_blocks: true
-    }
-
-    renderer    = Redcarpet::Render::HTML.new(options)
-    @markdown ||= Redcarpet::Markdown.new(renderer, extensions)
-    @markdown.render(text).html_safe
-  end    
- 
+    Redcarpet::Markdown.new(renderer, options).render(content).html_safe 
+  end
 end

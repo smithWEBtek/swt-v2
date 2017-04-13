@@ -4,17 +4,23 @@ This app is intended as both a blog and working lab.
 
 blog parts:
 =================================================================
+blog.md:    markdown file, in the repo, named "blog.md", copy in app/assets/blogs
+snippets:   github gists || ```formated markdown text``` || screenshot image
+images:     linked to 'blog.md' residing in cloudinary folder named: post.title
+videos:     linked to 'blog.md' residing in swt youtube channel named: post.title-video(#)
+
+columns in Post model: 
+
 repo:       url of github repo, named: post.title
 date:       date
 title:      lower cased sluggified "this-is-a-title", first thing in blog.md
 outline:    should be a standard section at top of blog.md
-blog.md:    markdown file, in the repo, named "blog.md"
-snippets:   github gists || ```formated markdown text``` || screenshot image
-images:     linked to 'blog.md' residing in cloudinary folder named: post.title
-videos:     linked to 'blog.md' residing in youtube channel named: post.title-video(#)
+body:       text or markdown file, in ~assets/blogs/~
+sections:(has_many) snippet, image, video, link, gist
 summary:    short paragraph to sum it up
 tweet:      140 character version of summary to tweet
 refs:       relevant links
+
 =================================================================
 170411
 

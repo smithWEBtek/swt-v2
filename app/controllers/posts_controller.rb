@@ -6,7 +6,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @blog = @post.read
   end
 
   def new
@@ -45,6 +44,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:date, :title, :outline, :summary)
+      params.require(:post).permit(:repo, :date, :title, :outline, :body, :summary, :tweet, :refs)
     end
 end

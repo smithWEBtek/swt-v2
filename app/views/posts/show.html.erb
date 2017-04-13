@@ -23,16 +23,11 @@
     <p><%= @post.summary %></p>
   </p>
  
-  
-Picture URL: <%= @post.picture_short_name %>
- 
-<%= image_tag(@post.picture_short_name) %>
-<!-- <img src="http://res.cloudinary.com/smithwebtek/raw/upload/v1492031519/brad_swt_baecsc.jpg"> -->
 
 
  <br><br>
 
- <%= @blog %>
+ <%= @post.read(@post.body) %>
   =========================================== 
   <p><h4>comments</h4>
     <article>

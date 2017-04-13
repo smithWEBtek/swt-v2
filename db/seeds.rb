@@ -28,18 +28,70 @@ end
 
 DATA_posts ={
  :post_keys =>
-    ["title", "outline", "summary", "date"],
+    ["repo", "date", "title", "outline", "body", "summary", "tweet", "refs"],
   :posts => [
-    ["Dark N' Scary Night", "TOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-10"],
-    ["Plain N' Simple Donuts", "TOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-11"],
-    ["Ugly Squirrels", "sTOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-12"],
-    ["Concatening Dogs", "kaTOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-13"],
-    ["How to Eat", "meTOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-14"],
-    ["A Gentler Command Line", "tenzTOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-15"],
-    ["Where is that Tag?", "daTOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-16"],
-    ["Aroma Therapy", "cTOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-17"],
-    ["Volley Ball, is it Discriminatory?", "TOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-18"],
-    ["Tolerating Intolerance", "fTOC, Ch1,Ch2,Ch3, conclusion", "in summary...", "2017-04-19"]
+    ["https://github.com/smithWEBtek/piano_search", 
+      "2017-04-12", 
+      "Piano Search CLI", 
+      "Ch1, Ch2, Ch3, etc", 
+      "blog.md", 
+      "you should play the piano", 
+      "tweet the piano", 
+      "ref1, ref2, link3, wiki article, stackoverflow link"], 
+
+    ["https://github.com/smithWEBtek/piano_search", 
+      "2017-04-12", 
+      "Dark N' Scary Night", 
+      "Ch1, Ch2, Ch3, etc", 
+      "blog.md", 
+      "you should play the piano", 
+      "tweet the piano", 
+      "ref1, ref2, link3, wiki article, stackoverflow link"], 
+
+    ["https://github.com/smithWEBtek/piano_search", 
+      "2017-04-12", 
+      "Plain N' Simple Donuts", 
+      "Ch1, Ch2, Ch3, etc", 
+      "blog.md", 
+      "you should play the piano", 
+      "tweet the piano", 
+      "ref1, ref2, link3, wiki article, stackoverflow link"], 
+
+    ["https://github.com/smithWEBtek/piano_search", 
+      "2017-04-12", 
+      "Piano Search CLI", 
+      "Ch1, Ch2, Ch3, etc", 
+      "blog.md", 
+      "you should play the piano", 
+      "tweet the piano", 
+      "ref1, ref2, link3, wiki article, stackoverflow link"], 
+
+    ["https://github.com/smithWEBtek/piano_search", 
+      "2017-04-12", 
+      "A Gentler Command Line", 
+      "Ch1, Ch2, Ch3, etc", 
+      "blog.md", 
+      "you should play the piano", 
+      "tweet the piano", 
+      "ref1, ref2, link3, wiki article, stackoverflow link"], 
+
+    ["https://github.com/smithWEBtek/piano_search", 
+      "2017-04-12", 
+      "Concatening Dogs", 
+      "Ch1, Ch2, Ch3, etc", 
+      "blog.md", 
+      "you should play the piano", 
+      "tweet the piano", 
+      "ref1, ref2, link3, wiki article, stackoverflow link"], 
+
+    ["https://github.com/smithWEBtek/piano_search", 
+      "2017-04-12", 
+      "Ugly Squirrels", 
+      "Ch1, Ch2, Ch3, etc", 
+      "blog.md", 
+      "you should play the piano", 
+      "tweet the piano", 
+      "ref1, ref2, link3, wiki article, stackoverflow link"]
   ]
 }
 

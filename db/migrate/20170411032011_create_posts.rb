@@ -1,13 +1,15 @@
 class CreatePosts < ActiveRecord::Migration[5.0]
   def change
     create_table :posts do |t|
+      t.string :repo
+      t.date  :date
       t.string :title
       t.text :outline
+      t.string :body
       t.text :summary
-      t.date  :date
-      t.text :picture
-      t.text :picture_url
-      t.text :picture_short_name
+      t.text :tweet
+      t.text :refs
+      
       t.timestamps
     end
   end

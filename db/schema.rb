@@ -35,15 +35,16 @@ ActiveRecord::Schema.define(version: 20170411205409) do
   end
 
   create_table "posts", force: :cascade do |t|
+    t.string   "repo"
+    t.date     "date"
     t.string   "title"
     t.text     "outline"
+    t.string   "body"
     t.text     "summary"
-    t.date     "date"
-    t.text     "picture"
-    t.text     "picture_url"
-    t.text     "picture_short_name"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.text     "tweet"
+    t.text     "refs"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "section_tags", force: :cascade do |t|
