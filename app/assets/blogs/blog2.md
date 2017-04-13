@@ -9,6 +9,13 @@ def make_users
   end
 end
 ```
+
+####list of stuff
+-first thing
+-well actually another
+-yup that's it
+
+
 ```
 namespace :db do
   desc 'drop, create, migrate, seed, restart'
