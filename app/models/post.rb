@@ -7,4 +7,14 @@ class Post < ApplicationRecord
   
   accepts_nested_attributes_for :sections
   validates :title, presence: true, uniqueness: true
+
+  mount_uploader :picture, PictureUploader
+ 
+  def make_url
+    url_base = "http://res.cloudinary.com/smithwebtek/raw/upload/"
+    url_id = "v1492031519/"
+    picture = "brad_swt_baecsc.jpg"
+    # self.picture_url = url_base + url_id + picture
+    self.picture_short_name = url_base + url_id + picture
+  end
 end

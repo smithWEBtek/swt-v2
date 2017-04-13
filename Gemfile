@@ -9,7 +9,8 @@ gem 'rails-erd'
 
 gem 'pygments.rb', '~> 0.6.0'
 gem 'redcarpet', '~>3.2.2'
-
+gem 'carrierwave'
+gem 'cloudinary'
 gem 'bootstrap-sass'
 gem 'rails', '~> 5.0.2'
 gem 'pg', '~> 0.18'

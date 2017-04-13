@@ -5,7 +5,9 @@ class CreatePosts < ActiveRecord::Migration[5.0]
       t.text :outline
       t.text :summary
       t.date  :date
-
+      t.text :picture
+      t.text :picture_url
+      t.text :picture_short_name
       t.timestamps
     end
   end

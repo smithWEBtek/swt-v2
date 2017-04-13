@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post.make_url
   end
 
   def new

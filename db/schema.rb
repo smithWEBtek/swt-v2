@@ -39,8 +39,11 @@ ActiveRecord::Schema.define(version: 20170411205409) do
     t.text     "outline"
     t.text     "summary"
     t.date     "date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "picture"
+    t.text     "picture_url"
+    t.text     "picture_short_name"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "section_tags", force: :cascade do |t|
